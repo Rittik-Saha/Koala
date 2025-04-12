@@ -1,0 +1,195 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #b9e188;
+}
+
+.container {
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+/* Branch */
+.branch {
+    background-color: #7b5319;
+    width: 90%;
+    height: 22px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 12px;
+}
+
+/* Koala Body*/
+.body {
+    background-color: #767677;
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    border-radius: 50% 50% 50% 50%/ 60% 60% 40% 40%;
+}
+/* Hide leg 1 & Front leg 1 */
+.body::before,
+.body:after {
+    content: "";
+    position: absolute;
+    background-color: #767677;
+    height: 70px;
+    width: 35px;
+    border-radius: 18px;
+}
+
+/* Hide leg 1 */
+.body:before {
+    top: 60px;
+    left: 115px;
+    transform: rotate(-15deg);
+}
+
+/* Front leg 1 */
+.body:after {
+    top: 70px;
+    left: 20px;
+}
+
+/* Face */
+.face {
+    position: absolute;
+    background-color: #8f8d8f;
+    height: 115px;
+    width: 115px;
+    top: 150px;
+    left: 88px;
+    border-radius: 50%;
+}
+
+/* Ear left and Ear right*/
+.ear-1,
+.ear-2 {
+    background-color: #ef8ddb;
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Ear right */
+.ear-2 {
+    box-shadow: 0 -5px 0 12px #a9a9ac;
+    top: 135px;
+    left: 172px;
+}
+
+/* Ear left */
+.ear-1 {
+    box-shadow: 0 -5px 0 12px #a9a9ac;
+    top: 205px;
+    left: 65px;
+}
+
+/* Front leg 2 and hide leg 2 */
+.ear-1:before,
+.ear-1:after {
+    position: absolute;
+    content: "";
+    background-color: #5c5b5d;
+    height: 70px;
+    width: 35px;
+    border-radius: 18px;
+}
+
+/* Front leg 2*/
+.ear-1:before {
+    top: 8px;
+    left: 50px;
+}
+
+/* Hide leg 2 */
+.ear-1:after {
+    left: 160px;
+    top: 5px;
+}
+
+/* Tail */
+.branch:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #aaa7aa;
+    bottom: 60px;
+    left: 267px;
+    border-radius: 50%;
+}
+/* Leaf */
+.branch:after {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    background-color: #768b36;
+    bottom: 20px;
+    left: 360px;
+    border-radius: 30px 0;
+}
+
+/* Eye lefy*/
+.eye {
+    height: 10px;
+    width: 20px;
+    position: absolute;
+    box-shadow: 0 3.5px #343434;
+    border-radius: 50%;
+    transform: rotate(-30deg);
+    top: 74px;
+    left: 16px;
+}
+
+/* Eye right */
+.eye:before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 20px;
+    box-shadow: 0 3.5px #343434; 
+    border-radius: 50%;
+    left: 50px;
+}   
+
+/* Nose */
+.eye:after{
+    content: "";
+    position: absolute;
+    background-color: #343434;
+    height: 35px;
+    width: 30px;
+    left: 20px;
+    border-radius: 50% 50% 50% 50%/ 60% 60% 40% 40%;
+}
+
+/* Blush */
+.face:after {
+    content: "";
+    position: absolute;
+    background-color: #ef8ddb;
+    height: 14px;
+    width: 14px;
+    top: 62px;
+    left: 86px;
+    opacity: 0.9;
+    border-radius: 50%;
+}
